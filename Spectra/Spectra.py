@@ -564,7 +564,7 @@ class SPECTRA_Model:
                 loss = self.internal_model.loss(X, labels)
             elif self.internal_model.use_cell_types == False:
                 loss = self.internal_model.loss_no_cell_types(X)
-
+            print(loss)
             loss.backward()
             opt.step()
         
